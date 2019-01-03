@@ -1,0 +1,51 @@
+ JEU DE L'EMPRUNT
+ 
+ // EXPLICATION DE CHAQUE VARIABLE
+                // tauxAnnuel    	->  taux de l'interet annuel
+                // nbrAnneeRbmt         ->  le nombre d'annee de remboursement
+                // capitalEmprunte      ->  le capital emprunte
+                // annuite              ->  le montant de l'annuite a rembourser
+                // mensualite           ->  la mensualite equivalente a rembourser
+                // mois                 ->  le nombre de mois de la période
+                // interetMois          ->  les intérets du mois courant
+                // amortissementMois    ->  le montant de l'ammortissement pour le mois courant
+                
+                En fonction du "tauxAnnuel" et du "capitalEmprunte" et du "nbrAnneeRbmt",
+
+               Question 1) Afficher l'annuité et la mensualité constante à rembourser d'après la formule de calcul financière 
+                qui vous est communiqué par la  maitrise d'ouvrage.
+			
+
+		Avec 2 chiffres decimaux obligatoires.	
+
+
+              Question 2) Afficher le tableau d'amortissement mensuel du prêt en mode console.
+                
+                sur 4 colonnes
+ 
+                compteur numero mois//  part interet(1 décimal) // part capital(1decimal) //  capital restant(pas de décimal) du// mensualité (pas de décimal)  
+                
+		                
+                
+                   
+                formule financière calcul a = mensualité constante à régler:
+		
+		Soit n nbre de mois de remboursement
+
+			tm= tmensuel=txannuel/12
+
+				a= K x Tm/Q
+
+			Q= (1-(1+ Tm )puissance -n)
+                
+                
+                
+                
+		Soit K(n) capital restant dû au mois n
+
+		part Interet(n+1) = K(n)*tm
+		part Capital(n+1) = Mensualité- part Interet(n+1).
+
+
+
+             

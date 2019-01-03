@@ -1,0 +1,28 @@
+Réaliser la mise en oeuvre du programme:(Le codage) à partir du pseudo-code suivant :
+
+/* prog principal
+ * 
+         * tableau tabF[n,2] de chaine  
+         *
+         * 
+         * // saisir les formations
+         * SaisieFormation(tabF)  // procédure de saisie
+         * // saisir le nombre de stagiaire par formation
+         * SaisieNbreStag(tabF)
+         * // trier les formations par ordre croissant de nombre de stagiaires
+         * Trier(tabF)
+         * // afficher les formations triées par nombre
+ *         Afficher(tabF)
+ * fin prog principal 
+
+
+
+Avec la création des 3 procedures ou fonctions dont vous avez besoins.
+décrire ces 3 procedures en pseudo-code avant de les implementer.
+
+Vous utiliserez un tableau à 2 dimensions.
+Vous utiliserez une procedure "try" "catch" pour la gestion des erreurs de saisie.
+
+
+
+ 
