@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Date et heure JS 01</title>
+
+	<script type="text/javascript">
+        
+		function AfficherDate(){
+			var maDate = new Date();
+			 mois = maDate.getMonth()+1;
+			if (mois< 10) {
+				mois= '0'+mois;
+			}
+			(maDate.getDate()<10)?jour='0'+maDate.getDate():jour=maDate.getDate();
+			
+
+			/*var jour = maDate.getDate();*/
+			 year = maDate.getFullYear();
+
+			 chaineDate = jour + " / " + mois + " / " + year;
+
+			document.getElementById("uneDate").value=chaineDate;
+		}
+		function AfficherHeure(){
+	     var maDate = new Date();
+         monHeure="";
+         (maDate.getHours()<10)?monHeure+='0'+maDate.getHours():monHeure+=maDate.getHours();monHeure+=' : ';
+         (maDate.getMinutes()<10)?monHeure+='0'+maDate.getMinutes():monHeure+=maDate.getMinutes();monHeure+=' : ';
+         (maDate.getSeconds()<10)?monHeure+='0'+maDate.getSeconds():monHeure+=maDate.getSeconds(); 
+         document.getElementById("uneHeure").value=monHeure;
+         setTimeout("AfficherHeure()",1000);
+		}
+
+
+	</script>
+	<style type="text/css">
+		label{
+			margin: 10px;
+			display: inline-block;
+		}
+		input[type=button]{
+			display: inline-block;
+			width: 120px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<form action="Horloge.html" method="post" enctype="text/plain">
+
+		<label for="unedate">Date du jour</label>
+		<input type="text" id="uneDate" />
+		<input type="button" id="btnDate" value="Afficher Date" onclick="AfficherDate()"/>
+
+		<br />
+		<label for="uneheure">Heure locale</label>
+		<input type="text" id="uneHeure" />
+		<input type="button" id="btnHeure" value="Afficher Heure" onclick="AfficherHeure()"/>
+	</form>
+
+
+
+
+</body>
+</html>

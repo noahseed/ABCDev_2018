@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {font-size:76%;
+
+margin:0px;
+padding:0px;
+
+background-color:#F5E9D9;}
+
+#global
+{ width:590px; margin-left:auto; margin-right:auto; 
+	
+}
+h1{
+	margin-top:30px;padding:20px;
+	color:#FFF;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:1.5em;
+	text-transform:uppercase;}
+#header
+{ position:relative;
+background-image:url(img_formu/haut_01.jpg);
+height:106px;
+text-align:center;
+margin:0px;
+}
+#container
+{margin:0px;
+background-image:url(img_formu/haut_02.jpg);
+background-repeat:repeat-y;
+width:590px;
+position:relative;
+padding-top:Px;
+padding-left:40px;
+padding-right:10px;
+
+}
+.contenu
+{
+	font-family:Arial, Helvetica, sans-serif; font-size:1.5em;
+	width:580px;
+	border:0px;
+	text-align:left;
+	padding:0px;
+	margin:0px;
+	
+	
+}
+
+#footer
+{
+	height:78px;
+	position:relative;
+	background-image:url(img_formu/bas.jpg); background-repeat:no-repeat;
+ 
+}
+
+	
+	
+
+
+	

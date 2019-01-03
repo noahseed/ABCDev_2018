@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<title>Evaluation fonctions javascript</title>
+<link href="mise_en_page.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="js/script.js"></script>
+
+
+</head>
+<body >
+<div id="global">
+<div id="header"> 
+<h1><br />
+
+  Evaluation cours javascript</h1>
+</div>
+<div id="container">
+ <br/>
+
+
+  <form action="Accueil.html" method="get" name="formJava" id="formJava"  >
+    <h2>formulaire avec traitement Javascript</h2>
+    <p>Texte libre</p>
+    <textarea name="textarea" cols="50" rows="4"> texte libre </textarea>
+    <br/><br/>
+    nom utilisateur :
+  <input name="NomUtilisateur" id="nom"  type="text" /><br/><br/>
+    Prénom :
+  <input name="PrenomUtilisateur" id="prenom"  type="text"/>
+  <br/>
+  <br/>
+    Jour
+  <select name="jour" id="jour">
+  <script>afficheJour();</script>
+  </select>
+    Mois
+  <select name="mois" id="mois">
+   <script>remplirMois();</script>
+  </select>
+    Année
+  <select name="annee" id="annee"  >
+  <script> remplirAnnee();</script>
+  </select>
+    <br />
+    <br />
+<br/>
+  <br/>
+  Affichage votre pseudo :<input type="text" name="pseudo" id="pseudo"   readonly="true" />
+  <br/>
+  <br/>
+
+  <input name="validation" type="button"   id="validation" value="Validation"  onclick="valider()"  />
+  <br/>
+  <input type="reset" name="annuler" id="annuler" value="Annuler" />
+  <br/>
+  </form>
+</div>
+<div id="footer">
+
+
+</div>
+</div>
+</body>
+</html>
