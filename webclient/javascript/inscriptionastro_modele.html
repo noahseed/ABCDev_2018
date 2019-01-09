@@ -1,14 +1,11 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-<title>Evaluation fonctions javascript</title>
-<link href="mise_en_page.css" rel="stylesheet" type="text/css" />
-<script language="javascript" type="text/javascript" src="js/script.js"></script>
-
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Evaluation fonctions javascript</title>
+  <link href="mise_en_page.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 </head>
 <body >
 <div id="global">
@@ -26,42 +23,58 @@
     <p>Texte libre</p>
     <textarea name="textarea" cols="50" rows="4"> texte libre </textarea>
     <br/><br/>
-    nom utilisateur :
+   <label>   nom utilisateur :</label>
   <input name="NomUtilisateur" id="nom"  type="text" /><br/><br/>
-    Prénom :
+    <label> Prénom :</label>
   <input name="PrenomUtilisateur" id="prenom"  type="text"/>
   <br/>
   <br/>
-    Jour
+   <label>  Jour</label>
   <select name="jour" id="jour">
-  <script>afficheJour();</script>
+  
   </select>
-    Mois
+    <label> Mois</label>
   <select name="mois" id="mois">
-   <script>remplirMois();</script>
+  
   </select>
-    Année
-  <select name="annee" id="annee"  >
-  <script> remplirAnnee();</script>
+   <label>  Année</label>
+  <select name="annee" id="annee">
+  
   </select>
+ <label>Civilité</label>
+ <select name="civil" id="civil">
+
+  </select>
+
     <br />
     <br />
 <br/>
   <br/>
-  Affichage votre pseudo :<input type="text" name="pseudo" id="pseudo"   readonly="true" />
+  Affichage votre pseudo :<input type="text" name="pseudo" id="pseudo"   readonly="readonly" />
   <br/>
   <br/>
 
-  <input name="validation" type="button"   id="validation" value="Validation"  onclick="valider()"  />
+  <input name="validation" type="button"   id="validation" value="Validation"  />
   <br/>
   <input type="reset" name="annuler" id="annuler" value="Annuler" />
   <br/>
   </form>
 </div>
 <div id="footer">
-
+ <div class="cookie" style="display:block">
+                <div class="close">
+                        <i class="fa fa-times fa-2x"></i>
+                    </div>
+                <div class="textCookie">
+                    <p>En poursuivant votre navigation sur notre site, vous acceptez l’utilisation de cookies qui vous permettra un confort d'utilisation optimal.<br /> En référence à <a href="#" target="_blank">L'article 32-II de la loi du 6 janvier 1978</a>.</p>
+                </div>
+            </div>
 
 </div>
 </div>
+ 
+
+<script language="javascript" type="text/javascript" src="js/script.js"></script>
+
 </body>
 </html>
