@@ -1,0 +1,46 @@
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, header, nav, main, section, aside, footer {
+    padding: 5px;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #111111;
+}
+
+header {
+    background-color: #999999;
+    color: #111111;
+}
+
+nav {
+    background-color: #9999CC;
+    color: #111166;
+}
+
+main {
+    background-color: #99CC99;
+    color: #116611;
+}
+
+section {
+    background-color: #CC9999;
+    color: #661111;
+}
+
+aside {
+    background-color: #CCCC99;
+    color: #666611;
+}
+
+footer {
+    background-color: #CCCCCC;
+    color: #111111;
+}

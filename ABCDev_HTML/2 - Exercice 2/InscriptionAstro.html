@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Exercice n° 1</title>
+	<script type="text/javascript">
+		var maChaine = "Test";
+		maChaine.toUpperCase();
+		function valNum(){
+			for (var i = maChaine.length - 1; i >= 0; i--) {
+				var maValeur = maChaine[i];
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>HTML - CSS - JavaScript</h1>
+	<h2>Exercice n° 1</h2>
+	<form action="#" method="post">
+		<label for="NomUtilisateur">Nom :</label>
+		<input type="text" id="NomUtilisateur" size="10">
+		<br>
+		<label for="PrenomUtilisateur">Prénom :</label>
+		<input type="text" id="PrenomUtilisateur" size="10">
+		<br>
+		<label for="DateNaissance">Date de naissance :</label>
+		<input type="date" id="DateNaissance" value="2018-01-22" min="1900-01-01" max="2018-12-31">
+		<br>
+		<label for="Pseudo">Pseudo :</label>
+		<input type="text" id="Pseudo" readonly>
+		<br>
+		<input type="reset" value="Réinitialiser">
+		<input type="submit" value="Envoyer" disabled="disabled">
+	</form>
+</body>
+</html>
