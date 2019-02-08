@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from arfp.xorm.fr/Web/HTML - Les bases/007_image.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Dec 2018 16:54:17 GMT -->
+<head>
+	    <meta charset="utf-8" />
+	    <title>Image</title>
+	</head>
+
+	<body>
+		<li><a href="000_menu_cours.html">Retour au menu.</a></li>
+
+		<!-- .jpg ou .jpeg : mieux pour photo (image légère mais détériorée) -->
+		<!-- .png : mieux pour non-photo (transparance et ne dégrade pas la qualité de l'image) 
+				2 types de .png => 8 bits (256 couleurs) et 24 bits (16 millions de couleurs, comme .jpeg)-->
+		<!-- .gif : mieux pour image animée (256 couleurs, plus lourde que .png, moins bonne transparance que .png) -->
+		<!-- BITMAP (.bmp) : à éviter car pas adapté au web ! (trop lourd) -->
+
+		<!-- <img/> : balise orpheline image, doit être dans un paragraphe ou une figure -->
+		<!-- OBLIGATOIRE src : attribut indiquant la source (marche comme href) -->
+		<!-- OBLIGATOIRE alt : attribut décrivant l'image (utile pour mal-voyant et moteur de recherche) -->
+		<!-- title : message qui s'affiche quand on survole l'image -->
+
+		<p>
+		    Vous souhaitez voir l'image dans sa taille d'origine ? Cliquez dessus !<br />
+		    <a href="img/montagne.jpg"><img src="img/montagne_mini.jpg" alt="Photo de montagne" title="Cliquez pour agrandir" /></a>
+		</p>
+
+		<!-- <figure> : à utiliser si l'image n'est pas juste de la décoration. Sinon, il faut mettre l'image dans un paragraphe 
+				Une figure peut comporter plusieurs images à la fois -->
+		<!-- <figcaption> : permet de mettre une légende à l'image -->
+		<figure>
+		    <img src="img/blocnotes.png" alt="Bloc-Notes" />
+		    <figcaption>Le logiciel Bloc-Notes</figcaption>
+		</figure>
+		
+	</body>
+
+<!-- Mirrored from arfp.xorm.fr/Web/HTML - Les bases/007_image.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Dec 2018 16:54:25 GMT -->
+</html>

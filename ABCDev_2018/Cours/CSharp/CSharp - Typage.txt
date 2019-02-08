@@ -1,0 +1,50 @@
+using System;
+
+namespace Typage
+{
+    class Typage1
+    {
+        static void Main(string[] args)
+        {
+
+            string s = "Une chaîne de caractères";
+            Console.WriteLine("Type de s [{1}] : [{0}]", s.GetType().FullName, s);
+
+            int ent = 2;
+            Console.WriteLine("\nType de ent [{1}] : [{0}, {2}]", ent.GetType().FullName, ent,sizeof(int));
+            
+            float fl = 10.5F;
+            Console.WriteLine("\nType de fl [{1}]: [{0}, {2}]", fl.GetType().FullName, fl, sizeof(float));
+            
+            double d = -4.6;
+            Console.WriteLine("\nType de d [{1}] : [{0}, {2}]", d.GetType().FullName, d, sizeof(double));
+
+            uint ui = 5;
+            Console.WriteLine("\nType de ui [{1}] : [{0}, {2}]", ui.GetType().FullName, ui, sizeof(uint));
+            
+            long l = 1000;
+            Console.WriteLine("\nType de l [{1}] : [{0}, {2}]", l.GetType().FullName, l, sizeof(long));
+            
+            ulong ul = 1001;
+            Console.WriteLine("\nType de ul [{1}] : [{0}, {2}]", ul.GetType().FullName, ul, sizeof(ulong));
+            
+            byte octet = 5;
+            Console.WriteLine("\nType de b [{1}] : [{0}, {2}]", octet.GetType().FullName, octet, sizeof(byte));
+            
+            short sh = -4;
+            Console.WriteLine("\nType de sh [{1}] : [{0}, {2}]", sh.GetType().FullName, sh, sizeof(short));
+            
+            ushort ush = 10;
+            Console.WriteLine("\nType de ush [{1}] : [{0}, {2}]", ush.GetType().FullName, ush, sizeof(ushort));
+            
+            decimal dec = 10.67M;
+            Console.WriteLine("\nType de dec [{1}] : [{0}, {2}]", dec.GetType().FullName, dec, sizeof(decimal));
+            
+            bool b = true;
+            Console.WriteLine("\nType de b [{1}] : [{0}, {2}]\n", b.GetType().FullName, b, sizeof(bool));
+
+            Console.Read();
+
+        }
+    }
+}

@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="www.w3.org/1999/xhtml">
+
+<!-- Mirrored from arfp.xorm.fr/Divers/UcpNet.exe by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Dec 2018 16:03:24 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- 
+/* ================= NOTIFICATION PAGE TEMPLATE: PATIENCE PAGE ================= */
+/* Edit and upload this template to customize your organization's patience page. */
+/*           Copyright © 2000-2009 Sophos Group. All rights reserved.            */
+/* ============================================================================= */
+-->
+<style>
+
+html,body        	{ font-family: Arial, sans-serif; margin: 0; padding: 0; height: 99%; border: none; }
+.body            	{ font-size: 11px; color: #002F52; }
+.bodytiny         	{ font-size: 10px; color: #aaa; line-height:14px; }
+.border01        	{ border: #dcdcdc solid 1px; background-color: #ebebeb; }
+.border02        	{ border: #ccc solid 1px; }
+.boxed             	{ background-color: #ebebeb; padding: 6px; }
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	}
+a:link, a:visited, a:active {
+	text-decoration:none;
+	color:#015589;
+	}
+a:hover {
+	text-decoration:none; 
+	color:#4A87BF;
+}
+.alertHeader, .alertHolder {
+	font-size: 11px;
+	color: #002F52;
+	margin: auto;
+	text-align: left;
+	padding: 6px;
+	}
+.alertHeader {
+        text-align: center;
+	}
+.outerborder {
+	margin: auto;
+	width: 397px;
+	border-top: #ebebeb solid 1px;
+	border-right: #ebebeb solid 1px;
+	border-bottom: 0px;
+	border-left: #ebebeb solid 1px;
+	}
+
+.progressbarHolder {
+	width: 312px;
+	height: 18px;
+	margin: 10px;
+	border: #ccc solid 1px;
+	}
+.progressbar {
+	background-color: #6BBCF1;
+	width: 310px;
+	height: 16px;
+	border: #f2f4f4 solid 1px;
+	}
+.alertHolder {
+	border-top: #ccc solid 1px;
+	border-right: #ccc solid 1px;
+	border-bottom: #ebebeb solid 1px;
+	border-left: #ccc solid 1px;
+	background-color: #e3e3e3;
+	}
+/* ===================== step-by-step ========================== */
+
+#alertDownload {
+	display: block;
+	text-align: center;
+	padding: 25px 10px 25px 25px;
+	}
+	
+#alertScanning {
+	display: block;
+	text-align: center;
+	padding: 0px 10px 25px 25px;
+	}
+	
+#alertReady {
+	display: block;
+	text-align: center;
+	padding: 0px 10px 25px 25px;
+	}
+
+/* ============================================================= */
+
+.border01 {
+	border: #e3e3e3 solid 1px;
+	width: 380px; }
+.border02 {border: #dcdcdc solid 1px;
+	}
+.boxed {
+	border: #ccc solid 1px;
+	background-color: #ebebeb;
+	padding: 6px;
+}
+
+.alertFooter {
+	clear: right;
+	background-image: url(../../servsophos.arfp.local/resources/images/wsa_alrt_foottile.html);
+	font-size: 11px;
+	color: #002F52;
+	width: 401px;
+	height: 45px;
+	margin: auto;
+	text-align: left;
+	margin-top: -1px;
+	}
+
+#alertCap {
+	clear: left;
+	float: right;
+	display: inline;
+	}
+/* ============================================================= */
+
+.alertTitle {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 6px 6px 6px 45px;
+    padding: 10px 0 10px 0;
+}
+
+.alertIcon {
+    background-image:url(../../servsophos.arfp.local/resources/images/ico_user_alerts.gif); background-repeat: no-repeat;
+    padding: 0px;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-left: 3px;
+    margin-top: 8px;
+}
+/* icon type */
+.malware	{ background-position: 0 0;}
+.blocklist 	{ background-position: 0 -35px;}
+.policy		{ background-position: 0 -70px;}
+.warn		{ background-position: 0 -107px;}
+.https_warn 	{ background-position: 0 -107px;}
+.filetypewarn 	{ background-position: 0 -107px;}
+.application 	{ background-position: 0 -35px;}
+.filetype	{ background-position: 0 -35px;}
+.certificate 	{ background-position: 0 -35px;}
+.patience	{ background-position: 0 -215px;}
+.timeout	{ background-position: 0 -286px;}
+.vscanderror	{ background-position: 0 -286px;}
+
+
+</style>
+    <title>Fichier en cours de contrôle : veuillez patienter</title>
+</head>
+<body>
+<div class="alertHeader" id="logo">
+    <img name='logo' src='../../servsophos.arfp.local/resources/dynamic/logo.jpg' alt='Logo de la société'/>
+</div>
+<div class="outerborder">
+    <div class="alertHolder">
+        <div class="alertIcon patience" id="alert_icon">
+        </div>
+        <div class="alertTitle" id="heading">
+            Fichier en cours de contrôle : veuillez patienter
+        </div>
+        <script language="JavaScript" type="text/javascript">
+    var fileSize = -1;
+    var displayThreatName =   'yes';
+    var displayThreatSource = 'yes';
+    var strDisplayLength = 60;
+    var fields = ['progress_spin','progress','done','error','threat','pua','vscanderror','vscandtimeout','vscandnoscan','scanning', 'pending', 'tftblock', 'tftwarn'];
+    var downloaded = 0;
+    var downloadComplete = false;
+
+    function patienceProgress(bytes_done, bytes_expect, percent_done,
+                              transfer_rate, time_remaining) 
+    {
+        var now = new Date();
+        downloaded = now.getTime();
+        if (bytes_expect == "") {
+            document.getElementById('txt_prog_spin').innerHTML = bytes_done + ' à ' + transfer_rate + '/sec';
+            show('progress_spin');
+        }
+        else {
+            document.getElementById('txt_prog').innerHTML = bytes_done + ' de ' + bytes_expect +
+                                                            ' à ' + transfer_rate + '/sec &mdash; ' + 
+                                                            time_remaining + ' restant';
+            document.getElementById('prog_div_progress').style.width = percent_done + '%';
+            document.getElementById('prog_div_percentage').innerHTML = percent_done + '%';
+            show('progress');
+        }
+    }
+
+    function setIcon(icon,state) {
+        if (document.getElementById('img_' + icon)) {
+            document.getElementById('img_' + icon).src = 'http://servsophos.arfp.local/resources/images/icons/ico_' + state + '.gif';
+        }
+    }
+
+    function setTitle(title) {
+        document.getElementById('heading').innerHTML = title;
+        document.title = title;
+    }
+    
+    function patienceScanning() {
+        setTitle('Fichier en cours de contrôle : veuillez patienter');
+        setIcon('download','ok');
+        setIcon('scan','busy');
+        show('scanning');
+    }
+      
+    function patiencePending(link) {
+        setTitle('Analyse supplémentaire requise pour ce fichier');
+        if (link == '#') { // for preview
+                document.getElementById('lnk_sandbox_file').innerHTML = "download link";
+        } 
+        else {
+                document.getElementById('lnk_sandbox_file').innerHTML = link;
+                window.setTimeout(function() { location.href=link }, 30 * 1000);
+        }
+        document.getElementById('lnk_sandbox_file').href = link;
+        setIcon('download','ok');
+        setIcon('scan','caution');
+        show('pending');
+    }
+
+    function patienceError(errorMessage) {
+        downloadComplete = true;
+        setTitle('Erreur fichier ');
+        document.getElementById('txt_error').innerHTML=errorMessage;
+        document.getElementById('error').style.display="";
+        document.getElementById('alert_icon').className = 'alertIcon vscanderror';
+        setIcon('scan','error');
+        setIcon('ready','error');
+        show('error');
+    }
+
+    function patienceKeyError(key) {
+        downloadComplete = true;
+        if (key!='downloadError') {
+            setTitle('Requête bloquée : impossible de contrôler le fichier');
+            document.getElementById('alert_icon').className = 'alertIcon vscanderror';
+            setIcon('scan','error');
+            setIcon('ready','error');
+        } else {
+            setTitle('Connexion perdue : impossible de télécharger le fichier                                                                           ');
+        document.getElementById('alert_icon').className = 'alertIcon vscanderror';
+            setIcon('download','error');
+            setIcon('ready','error');
+
+        }
+        show(key);
+    }
+
+    function patiencePuaFound(puaname,threatsource) {
+        downloadComplete = true;
+        setTitle('Requête bloquée : application interdite');
+        document.getElementById('alert_icon').className = 'alertIcon application';
+        if (displayThreatName == 'yes') {
+            document.getElementById('txt_pua').innerHTML += 
+                "<span class='alertmessage'>Menace: " +
+                shorten(puaname) + "</span><br />";
+        }
+        if (displayThreatSource == 'yes') {
+            document.getElementById('txt_pua').innerHTML += 
+                "<span class='alertmessage'>Source de la menace: " + 
+                shorten(threatsource) + "</span>";
+        }
+        setIcon('scan','ok');
+        setIcon('ready','error');
+        show('pua');
+    }
+
+    function patienceThreatFound(virusname,threatsource) {
+        downloadComplete = true;
+        setTitle('Requête bloquée : le fichier contient du code malveillant');
+        document.getElementById('alert_icon').className = 'alertIcon malware';
+        if (displayThreatName == 'yes') {
+            document.getElementById('txt_threat').innerHTML += 
+                "<span class='alertmessage'>Menace: " + 
+                shorten(virusname) + "</span><br />";
+        }
+        if (displayThreatSource == 'yes') {
+            document.getElementById('txt_threat').innerHTML += 
+                "<span class='alertmessage'>Source de la menace: " +
+                shorten(threatsource) + "</span>";
+        }
+        setIcon('scan','ok');
+        setIcon('ready','error');
+        show('threat');
+    }
+    
+    function patienceTFTBlockFound(tfttype,threatsource) {
+        downloadComplete = true;
+        setTitle('Requête bloquée : type de fichiers interdit');
+        document.getElementById('alert_icon').className = 'alertIcon malware';
+        if (displayThreatName == 'yes') {
+            document.getElementById('txt_tftblock').innerHTML += 
+                "<span class='alertmessage'>Menace: " + 
+                shorten(tfttype) + "</span><br />";
+        }
+        if (displayThreatSource == 'yes') {
+            document.getElementById('txt_tftblock').innerHTML += 
+                "<span class='alertmessage'>Source de la menace: " +
+                shorten(threatsource) + "</span>";
+        }
+        setIcon('scan','ok');
+        setIcon('ready','error');
+        show('tftblock');
+    }
+
+    function patienceTFTWarnFound(tfttype, threatsource, link) {
+        downloadComplete = true;
+        setTitle('Avertissement : fichier douteux');
+        document.getElementById('alert_icon').className = 'alertIcon malware';
+        if (displayThreatName == 'yes') {
+            document.getElementById('txt_tftwarn').innerHTML +=
+                "<span class='alertmessage'>Motif: " +
+                shorten(tfttype) + "</span><br />";
+        }
+        if (displayThreatSource == 'yes') {
+            document.getElementById('txt_tftwarn').innerHTML +=
+                "<span class='alertmessage'>Site: " +
+                shorten(threatsource) + "</span>";
+        }
+        document.getElementById('lnk_file_warn').onclick = function() { window.open(link); };
+        setIcon('scan','ok');
+        setIcon('ready','caution');
+        show('tftwarn');
+    }
+
+    function patienceDone(link) {
+        downloadComplete = true;
+        setTitle('Le fichier est prêt ');
+        document.getElementById('lnk_file').onclick = function() { window.open(link); };
+        setIcon('download','ok');
+        setIcon('scan','ok');
+        setIcon('ready','ok');
+        show('done');
+    }
+    
+    function show(field) {
+        for (var i=0, n = fields.length; i < n; i++) {
+            document.getElementById(fields[i]).style.display="none";
+        }
+        document.getElementById(field).style.display="";
+    }
+
+    function stallCheck() {
+        var now = new Date()
+        if (now.getTime() - downloaded > 4800) {
+            document.getElementById('txt_stalled').innerHTML = 'Aucune réponse du serveur pendant cinq secondes - nouvel essai...';	
+        } else {
+            document.getElementById('txt_stalled').innerHTML = '';	
+        }
+        if (!downloadComplete) window.setTimeout('stallCheck()',5000);
+    }
+
+    function init() {
+        if (self != top) {
+            top.location = self.location;
+            return;
+        }
+        var h = document.body.clientHeight;
+        var w = document.body.clientWidth;
+        if (h < 300 || w < 500) {
+            window.resizeTo(600, 480);
+            window.focus();
+        }
+        window.setTimeout('stallCheck()',5000);
+    }
+
+    function shorten(str) {
+        if (str.length > strDisplayLength) {
+            return str.substr(0, strDisplayLength) + "...";
+        }
+        return str;
+    }
+
+</script>
+
+<div style="display:none;visibility:hidden;" id="selectedMenuItem">UsrViewPatience</div>
+    <div class="boxed" style="margin-bottom:10px;">
+        <table border="0">
+            <tr>
+                <td width="20"><img id="img_download" src="../../servsophos.arfp.local/resources/images/icons/ico_arrow.gif" alt=">" width="16" height="16" /></td>
+                <td class="body">Téléchargement en cours du fichier demandé</td>
+            </tr>
+            <tr>
+                <td><img id="img_scan" src="../../servsophos.arfp.local/resources/images/icons/ico_default.gif" alt=">" /></td>
+                <td class="body">Contrôle en cours du fichier téléchargé</td>
+            </tr>
+            <tr>
+                <td><img id="img_ready" src="../../servsophos.arfp.local/resources/images/icons/ico_default.gif" alt=">" /></td>
+                <td class="body">Le fichier est prêt</td>
+            </tr>
+        </table>
+    </div>
+
+<!--show hide div layer containing steps -->
+<div id="progress_spin" style="display:none" >
+    <img src="../../servsophos.arfp.local/resources/images/processLight.gif" alt="" /><br />
+    <div class="bodytiny" id="txt_prog_spin" >&nbsp;</div>
+</div>
+
+<!-- STEP 1: Downloading your requested file -->
+<div id="progress">
+    <div id="alertDownload">Le fichier demandé est en cours de téléchargement et de contrôle d&#039;éventuelles menaces à la sécurité.<br />
+        <div class="border01">
+            <div class="border02">
+                <div class="border01">
+                    <div id="prog_div_progress" width="0%" class="barblue">
+                        <div id="prog_div_percentage" class="progressPercent">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small" id="txt_prog" >&nbsp;</div>
+    <div class="small" id="txt_stalled" >&nbsp;</div>
+</div>
+
+<!-- STEP 2: Scanning downloaded file -->
+<div id="scanning" style="display:none" >
+    <!--<img src="http://servsophos.arfp.local/resources/images/processLight.gif" alt="" /><br />-->
+    Le téléchargement et l’analyse de sécurité du fichier demandé sont en cours. S&#039;il est considéré sain, un lien vers ce fichier sera affiché ci-dessous.</div>
+
+<!--         Consulting Sophos Sandbox -->
+<div id="pending" style="display:none" >Du contenu suspect a été détecté dans le fichier demandé. Le fichier a été envoyé à Sophos Sandstorm qui va procéder à une analyse supplémentaire. Cette opération peut prendre quelques minutes.<p></p>Si le fichier est considéré sain suite à l&#039;analyse, vous pourrez le télécharger à l&#039;emplacement indiqué ci-dessous :        <p></p><a id="lnk_sandbox_file"></a>
+</div>
+
+<!-- STEP 4: File is ready (or error) -->
+<div id="done" style="display:none;" >Le fichier a été contrôlé et confirmé sain.    <div class="buttonHolder" style="margin-top:5px;">
+        <input type="button" id="lnk_file" value='Cliquez ici pour récupérer le fichier'/>
+    </div>
+</div>
+
+<div id="error" style="display:none">
+    <p id="txt_error" class="body">Le fichier que vous avez demandé contient une erreur et n'a pas pu être contrôlé.</p>
+</div>
+<div id="threat" style="display:none">
+    <p id="txt_threat" class="body"></p>
+    <p id="txt_threatinfo" class="body">Le fichier que vous avez demandé contient du code malveillant. Son téléchargement a été bloqué.</p>
+</div>
+<div id="tftblock" style="display:none">
+    <p id="txt_tftblock" class="body"></p>
+    <p id="txt_tftblockinfo" class="body">La stratégie d’accès à Internet de votre entreprise restreint les téléchargements de ce type de fichier.</p>
+</div>
+<div id="tftwarn" style="display:none">
+    <p id="txt_tftwarn" class="body"></p>
+    <p id="txt_tftwarninfo" class="body">Il semble qu&#039;avec la politique d&#039;accès Internet de votre entreprise, vous ne pouvez pas télécharger ce type de fichier. Vous pouvez télécharger ce fichier à votre propre discrétion.</p>
+    <div class="buttonHolder" style="margin-top:5px;">
+        <input type="button" id="lnk_file_warn" value='Cliquez ici pour récupérer le fichier'/>
+    </div>
+</div>
+<div  id="pua" style="display:none">
+    <p id="txt_pua" class="body"></p>
+    <p id="txt_puainfo" class="body">L&#039;accès à ce fichier est interdit car il représente un risque de sécurité potentiel.</p>
+</div>
+<div  id="vscanderror" style="display:none">
+    <p id="txt_vscanderror" class="body"></p>
+    <p id="txt_vscanderrorinfo" class="body">Le fichier demandé n&#039;a pas pu être contrôlé par Sophos Anti-Virus. Ceci signifie qu&#039;il est soit crypté, soit qu&#039;il contient des erreurs empêchant de le contrôler totalement. Par conséquent, le téléchargement du fichier a été bloqué.</p>
+ </div>
+<div  id="vscandtimeout" style="display:none">
+    <p id="txt_vscandtimeout" class="body"></p>
+    <p id="txt_vscandtimeoutinfo" class="body">﻿Le fichier que vous avez demandé était d&#039;une taille trop grande pour faire l&#039;objet d&#039;une recherche complète des menaces. Veuillez contacter votre administrateur système pour pouvoir accéder à ce fichier.</p>
+</div>
+<div  id="vscandnoscan" style="display:none">
+    <p id="txt_vscandnoscan" class="body"></p>
+    <p id="txt_vscandnoscaninfo" class="body">﻿Le fichier a été téléchargé mais n&#039;a pas pu faire l&#039;objet d&#039;une recherche des menaces.</p>
+</div>
+<div  id="downloadError" style="display:none">
+    <p id="txt_downloadError" class="body"></p>
+    <p id="txt_downloadError" class="body">Le fichier n&#039;a pas pu être téléchargé en raison de la perte de connexion avec le serveur.</p>
+</div>
+
+<script>
+    init();
+    </script>
+
+    </div>
+</div>
+
+<div class="alertFooter">
+    <div id="alertCap"><img src="../../servsophos.arfp.local/resources/images/wsa_alrt_footcap.html" alt="" /></div>
+</div>
+<script>patienceProgress('5.8 MB',' 39 MB',15,'1.4 MB','00:00:22');</script>
+<script>patienceProgress('8.1 MB',' 39 MB',21,'1.2 MB','00:00:26');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceProgress(' 12 MB',' 39 MB',31,'1.2 MB','00:00:22');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceProgress(' 17 MB',' 39 MB',44,'1.3 MB','00:00:16');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceProgress(' 20 MB',' 39 MB',51,'1.3 MB','00:00:15');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceProgress(' 24 MB',' 39 MB',62,'1.3 MB','00:00:11');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceProgress(' 26 MB',' 39 MB',67,'1.2 MB','00:00:10');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceProgress(' 29 MB',' 39 MB',75,'1.2 MB','00:00:08');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceProgress(' 33 MB',' 39 MB',85,'1.2 MB','00:00:04');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceProgress(' 37 MB',' 39 MB',94,'1.2 MB','00:00:01');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceProgress(' 38 MB',' 39 MB',98,'1.1 MB','00:00:00');</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceScanning();</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script>patienceDone("http://servsophos.arfp.local/cgi-bin/patience.cgi?id=c18c0cfd-2c65-47e5-829b-18a018b1084a");</script></body>
+<!-- Mirrored from arfp.xorm.fr/Divers/UcpNet.exe by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Dec 2018 16:03:24 GMT -->
+</html>

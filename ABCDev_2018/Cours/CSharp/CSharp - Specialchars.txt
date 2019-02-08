@@ -1,0 +1,17 @@
+C# Chars
+
+
+\' for a single quote
+\" for a double quote
+\\ for a backslash
+\0 for a null character
+\a for an alert character
+\b for a backspace
+\f for a form feed
+\n for a new line
+\r for a carriage return
+\t for a horizontal tab
+\v for a vertical tab
+\uxxxx for a unicode character hex value (e.g. \u0020)
+\x is the same as \u, but you don't need leading zeroes (.g. \x20)
+\Uxxxxxxxx for a unicode character hex value (longer form needed for generating surrogates)
