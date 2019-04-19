@@ -51,8 +51,8 @@ class Categories extends Db
 
     public function add(Category $category) : int
     {
-        $sql = "INSERT
-        INTO `categories`
+        $sql = "INSERT INTO
+        `categories`
         (
             `category_name`,
             `category_description`
